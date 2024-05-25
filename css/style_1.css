@@ -1,0 +1,161 @@
+.up-train {
+/*  background-color: #90EE90;  Light green for Up train */
+/*background-color:burlywood;*/
+/*  border-left: 5px solid #2ECC71; /* Green border on left side */*/
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.down-train {
+/*  background-color: #F7CAC9; Light red for Down train */
+/*background-color: darkorchid;*/
+background-color: wheat;
+  border-right: 5px solid #E74C3C; /* Red border on right side */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.up-train span,
+.down-train span {
+  color: #333; /* Text color for both trains */
+}
+
+
+body {
+  background-color: #2C3E50;
+/*background:rebeccapurple;*/
+  font-family: sans-serif;
+  color: white;
+
+}
+header {
+  margin: 10px auto;
+  text-align: center;
+  border-bottom: 1px solid #34495E;
+}
+footer {
+  margin: 10px auto;
+  text-align: center;
+  border-bottom: 1px solid #34495E;
+}
+h1, h3 { margin: 10px; }
+.demos {
+  display: block;
+   position: right;
+}
+.status div span:nth-child(2) {
+  margin-left: 30px;
+  line-height: 35px;
+}
+.status-green {
+  display: block;
+  height: 35px;
+  position: relative;
+  color: #2ECC71;
+}
+.status-yellow {
+  display: block;
+  height: 35px;
+  position: relative;
+  color: #F1C40F;
+}
+.status-red {
+  display: block;
+  height: 35px;
+  position: relative;
+  color: #E74C3C;
+}
+.status-purple {
+  display: block;
+  height: 35px;
+  position: relative;
+  color: violet;
+}
+.status-violet{
+  display: block;
+  height: 35px;
+  position: relative;
+  color: darksalmon;
+}
+
+/** Server status css **/
+.server-status {
+  left: 10px;
+  top: 50%;
+  margin-left: 0px;
+  margin-top: -5px;
+  position: absolute;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.server-status::before,
+.server-status::after {
+  left: 0;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -6px;
+  position: absolute;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.server-status[type="up"],
+.server-status[type="up"]::before,
+.server-status[type="up"]::after {
+  background: #2ECC71;
+}
+.server-status[type="down"],
+.server-status[type="down"]::before,
+.server-status[type="down"]::after {
+  background: #E74C3C;
+}
+.server-status[type="slow"],
+.server-status[type="slow"]::before,
+.server-status[type="slow"]::after {
+  background: #F1C40F;
+}
+
+.server-status[type="await"],
+.server-status[type="await"]::before,
+.server-status[type="await"]::after {
+  background: violet;
+}
+.server-status::before {
+  content: "";
+  animation: bounce 1.5s infinite;
+}
+.server-status::after {
+  content: "";
+  animation: bounce 1.5s -0.4s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
