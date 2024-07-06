@@ -1867,6 +1867,23 @@ abbr[data-bs-original-title] {
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none; }
 
+
+
+.scrollable-container {
+/*  width: fit-content; /* Adjust width as needed for your content */*/
+/*  height: [desired height]; /* Set a height for the container */*/
+  width: 100vw; /* Adjust as needed for horizontal margins */
+  height: 100vh;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent content from wrapping unnecessarily */
+}
+
+.scrollable-content {
+  display: inline-block; /* Allow content to overflow horizontally */
+/*  width: [total width of your content]; /* Set the total width of all content */*/
+}
+
+
 address {
   margin-bottom: 1rem;
   font-style: normal;
@@ -14383,7 +14400,7 @@ dl {
     .sidebar-icon-only .sidebar .sidebar-actions {
       display: none; }
   .sidebar-icon-only .main-panel {
-    width: calc(100% - 70px); } }
+    width: calc(100% - 100px); } }
 
 .rtl {
   direction: rtl;
